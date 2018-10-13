@@ -15,8 +15,6 @@ LOG_FILE="$(pwd)/chgSdkVersion_log.txt"
 ## main ##
 AAR_LIST=$(find ${PROJECT_DIR} -name "*.aar")
 
-#echo "aarリストは以下です" #debug
-#echo ${AAR_LIST} #debug
 if [ -e ${LOG_FILE} ]; then
 	rm ${LOG_FILE}
 fi
@@ -57,7 +55,6 @@ for aar in ${AAR_LIST}; do
 		cd ${TMP_WORK}
 		zip -rmu ${aar} ./* > /dev/null 2>&1
 		cd $(pwd)
-		#break; #debug
 	fi
 done
 
