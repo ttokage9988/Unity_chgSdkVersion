@@ -3,7 +3,7 @@
 ## arg check ##
 if [ ! "$#" = 3 ]; then
 	echo "Usage: $0 <current_dir_unity_project> <minSdkVersion> <targetSdkVersion>"
-	echo "(example: $0 project 17 21)" 
+	echo "(example: $0 project 17 21)"
 	exit 1
 fi
 
@@ -50,13 +50,13 @@ for aar in ${AAR_LIST}; do
 
 			sed -i '/targetSdkVersion/ s/targetSdkVersion="[0-9]*"/targetSdkVersion='\"$3\"'/g' ${am}
 		done
-		
+
 		## output log ##
-		grep -e minSdkVersion -e targetSdkVersion ${am} | tee -a ${LOG_FILE} 
+		grep -e minSdkVersion -e targetSdkVersion ${am} | tee -a ${LOG_FILE}
 
 		cd ${TMP_WORK}
 		zip -rmu ${aar} ./* > /dev/null 2>&1
-		cd $(pwd) 
+		cd $(pwd)
 		#break; #debug
 	fi
 done

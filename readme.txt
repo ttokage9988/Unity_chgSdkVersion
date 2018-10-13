@@ -1,4 +1,6 @@
-for linux
+for Linux
+for Mac
+
 --概要--
 
 Unity projectの.aarファイルに格納された
