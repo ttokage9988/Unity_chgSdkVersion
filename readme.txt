@@ -18,25 +18,25 @@ Please back up your Unity Project.
 
 	example:
 	.
-	├── chgSdkVersion.sh	<--deploy
+	├── chgSdkVersion_for***.sh	<--deploy
 	├── UnityProject
 	~~
 
 3.配置したスクリプトと同じディレクトリに移動し、
-chgSdkVersion.shを実行します。
+chgSdkVersion_for***.shを実行します。
 
 	$ cd <deploy_script_dir>	
 
 	usage:
-	$ ./chgSdkVersion.sh <UnityProject> <minSdkVersion> <targetSdkVersion>
+	$ ./chgSdkVersion_for***.sh <UnityProject> <minSdkVersion> <targetSdkVersion>
 
 	example:
-	$ ./chgSdkVersion.sh UnityProject 17 22
+	$ ./chgSdkVersion_for***.sh UnityProject 17 22
 
 4.スクリプト実行後、カレントディレクトリに書き換えたファイルのログが出力されます。
 
 .
-├── chgSdkVersion.sh
+├── chgSdkVersion_for***.sh
 ├── chgSdkVersion_log.txt	<--generate
 ├── UnityProject
 ~~
